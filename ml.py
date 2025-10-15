@@ -1,6 +1,5 @@
 from collections import deque
 
-# Define the graph as an adjacency list
 graph = {
     'A': ['B', 'C'],
     'B': ['D', 'E'],
@@ -11,8 +10,8 @@ graph = {
 }
 
 def bfs(graph, start):
-    visited = []         # To store visited nodes
-    queue = deque([start])  # Queue for BFS
+    visited = []     
+    queue = deque([start])
 
     while queue:
         node = queue.popleft()
@@ -23,6 +22,5 @@ def bfs(graph, start):
                 if neighbor not in visited:
                     queue.append(neighbor)
 
-# Run BFS
 print("BFS Traversal:")
 bfs(graph, 'A')
