@@ -1,6 +1,5 @@
 from collections import deque
 
-# Maze grid
 maze = [
     ['S', '.', '.', '#'],
     ['.', '#', '.', '.'],
@@ -9,7 +8,6 @@ maze = [
 
 rows, cols = len(maze), len(maze[0])
 
-# Directions: up, down, left, right
 dirs = [(-1,0), (1,0), (0,-1), (0,1)]
 
 def bfs(maze, start, goal):
@@ -28,7 +26,6 @@ def bfs(maze, start, goal):
                 visited.add((nr, nc))
                 parent[(nr, nc)] = (r, c)
     
-    # Reconstruct path
     path = []
     node = goal
     while node:
